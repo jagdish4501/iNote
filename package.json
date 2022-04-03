@@ -6,10 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "jagdish",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
+    "express-validator": "^6.14.0",
     "mongoose": "^6.2.8"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagdish4501/iNote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jagdish4501/iNote/issues"
+  },
+  "homepage": "https://github.com/jagdish4501/iNote#readme"
 }
