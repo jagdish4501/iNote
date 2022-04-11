@@ -6,10 +6,14 @@ const port = 3000
 conectWithDB();
 app.use('/api/auth', require('./Route/auth'));
 app.use('/api/note', require('./Route/note'));
-app.get('/', (req, res) => {
-    res.send('Hii jagu how are you!!')
-})
+app.get('/',
+    (req, res) => {
+        res.send('Hii jagu how are you!!')
+    }
+)
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+app.listen(port,
+    () => {
+        console.log(`Example app listening on port ${port}`)
+    }
+)
