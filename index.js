@@ -2,7 +2,7 @@ const conectWithDB = require('./DB')
 const express = require('express');
 const app = express()
 app.use(express.json())
-const port = 3000
+const port = 5000
 conectWithDB();
 app.use('/api/auth', require('./Route/auth'));
 app.use('/api/note', require('./Route/note'));
