@@ -4,6 +4,7 @@ const rout = express.Router();
 const bcrypt = require('bcrypt')
 var jwt = require('jsonwebtoken');
 const JWT_SECRET = 'jaggu@jk';
+const fetchuser = require('../MidleWare/fetchUser')
 const { body, validationResult } = require('express-validator');
 const { response } = require('express');
 rout.post('/creatUser', [
@@ -86,5 +87,16 @@ rout.post('/login', [
     }
 
 
+});
+rout.post('/getuser', fetchuser, async (req, res) => {
+
+    try {
+        userId = req.user.id;
+        const user = await User.findById(userId).select("-password")
+        res.send(user)
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
 });
 module.exports = rout;
